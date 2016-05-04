@@ -50,3 +50,24 @@ spring:
 ---
 spring:
   profiles: postgres
+##
+# The PostgreSQL Application Configuration File
+#
+# This file is included when the 'postgres' Spring Profile is active.
+##
+
+##
+# Data Source Configuration
+##
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_mifos_payment_bridge
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+# Hibernate
+  jpa:
+    show-sql: false
+    hibernate: ddl-auto=create
+      naming-strategy: org.hibernate.cfg.DefaultNamingStrategy
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

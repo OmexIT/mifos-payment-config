@@ -39,7 +39,6 @@ spring:
 ##
 
 # Hibernate
-spring:
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.HSQLDialect

@@ -1,0 +1,53 @@
+spring:
+  profiles:
+    active: http,hsqldb,postgres
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2021/eureka/
+
+processPayment:
+  fixedDelay: 5000
+
+mifos:
+  endPoint: https://localhost:8443/fineract-provider/api/v1/
+  username: mifos
+  password: password
+
+
+---
+
+spring:
+  profiles: http
+
+server:
+  port: 2022
+
+---
+spring:
+  profiles: hsqldb
+
+##
+# The HSQLDB Application Configuration File
+#
+# This file is included when the 'hsqldb' Spring Profile is active.
+##
+
+##
+# Data Source Configuration
+##
+
+# Hibernate
+spring:
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.HSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+      naming-strategy: org.hibernate.cfg.DefaultNamingStrategy
+
+---
+spring:
+  profiles: postgres

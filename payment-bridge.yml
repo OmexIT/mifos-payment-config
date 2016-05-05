@@ -25,13 +25,13 @@ mifos:
 ##
 
 # Hibernate
-  jpa:
-    show-sql: true
-    database-platform: org.hibernate.dialect.HSQLDialect
-    generate-ddl: true
-    hibernate:
-      ddl-auto: create-drop
-      naming-strategy: org.hibernate.cfg.DefaultNamingStrategy
+#  jpa:
+#    show-sql: true
+#    database-platform: org.hibernate.dialect.HSQLDialect
+#    generate-ddl: true
+#    hibernate:
+#      ddl-auto: create-drop
+#      naming-strategy: org.hibernate.cfg.DefaultNamingStrategy
 
 
 ##
@@ -43,6 +43,7 @@ mifos:
 ##
 # Data Source Configuration
 ##
+spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/db_mifos_payment_bridge
     username: postgres

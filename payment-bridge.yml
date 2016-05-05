@@ -1,6 +1,5 @@
-spring:
-  profiles:
-    active: http,hsqldb,postgres
+server:
+  port: 2022
 
 eureka:
   client:
@@ -14,19 +13,6 @@ mifos:
   endPoint: https://localhost:8443/fineract-provider/api/v1/
   username: mifos
   password: password
-
-
----
-
-spring:
-  profiles: http
-
-server:
-  port: 2022
-
----
-spring:
-  profiles: hsqldb
 
 ##
 # The HSQLDB Application Configuration File
@@ -47,9 +33,7 @@ spring:
       ddl-auto: create-drop
       naming-strategy: org.hibernate.cfg.DefaultNamingStrategy
 
----
-spring:
-  profiles: postgres
+
 ##
 # The PostgreSQL Application Configuration File
 #

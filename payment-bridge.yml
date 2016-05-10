@@ -1,5 +1,6 @@
 server:
   port: 2022
+  contextPath: api/v1
 
 eureka:
   client:

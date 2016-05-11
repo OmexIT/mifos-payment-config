@@ -1,10 +1,10 @@
 server:
   port: 2022
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:2021/eureka/
+# eureka:
+  # client:
+    # serviceUrl:
+      # defaultZone: http://localhost:2021/eureka/
 
 processPayment:
   fixedDelay: 5000
